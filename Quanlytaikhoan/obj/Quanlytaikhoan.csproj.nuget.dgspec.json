@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\MyCode\\Thực_tập\\Quanlytaikhoan\\Quanlytaikhoan\\Quanlytaikhoan.csproj": {}
+    "E:\\CSharp\\Intern_Project1\\Quanlytaikhoan\\Quanlytaikhoan.csproj": {}
   },
   "projects": {
-    "G:\\MyCode\\Thực_tập\\Quanlytaikhoan\\Quanlytaikhoan\\Quanlytaikhoan.csproj": {
+    "E:\\CSharp\\Intern_Project1\\Quanlytaikhoan\\Quanlytaikhoan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\MyCode\\Thực_tập\\Quanlytaikhoan\\Quanlytaikhoan\\Quanlytaikhoan.csproj",
+        "projectUniqueName": "E:\\CSharp\\Intern_Project1\\Quanlytaikhoan\\Quanlytaikhoan.csproj",
         "projectName": "Quanlytaikhoan",
-        "projectPath": "G:\\MyCode\\Thực_tập\\Quanlytaikhoan\\Quanlytaikhoan\\Quanlytaikhoan.csproj",
-        "packagesPath": "C:\\Users\\khoan\\.nuget\\packages\\",
-        "outputPath": "G:\\MyCode\\Thực_tập\\Quanlytaikhoan\\Quanlytaikhoan\\obj\\",
+        "projectPath": "E:\\CSharp\\Intern_Project1\\Quanlytaikhoan\\Quanlytaikhoan.csproj",
+        "packagesPath": "C:\\Users\\Minh Vuong\\.nuget\\packages\\",
+        "outputPath": "E:\\CSharp\\Intern_Project1\\Quanlytaikhoan\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\khoan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Minh Vuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,13 +34,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -58,6 +48,14 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -67,6 +65,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -92,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

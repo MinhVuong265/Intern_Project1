@@ -1,0 +1,59 @@
+﻿@page "/login"
+@using Microsoft.JSInterop
+@inject HttpClient Http
+@inject NavigationManager Nav
+@inject IJSRuntime JS
+
+@using UserManagementApi.Models
+
+<h3>Đăng nhập</h3>
+
+@if (!string.IsNullOrEmpty(ErrorMessage))
+{
+        <p style="color: red;">@ErrorMessage</p>
+}
+
+<div>
+    <label>Username:</label>
+    <input @bind="LoginRequest.Username" type="text" />
+</div>
+<div>
+    <label>Password:</label>
+    <input @bind="LoginRequest.Password" type="password" />
+</div>
+
+<button @onclick="SubmitLogin">Login</button>
+
+@code {
+    private LoginRequest loginRequest { get; set; } = new();
+    private string ErrorMessage = "";
+
+    private async Task SubmitLogin()
+    {
+        try
+        {
+            var response = await Http.PostAsJsonAsync("https://localhost:7111/api/auth/login", loginRequest);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
+                await JS.InvokeVoidAsync("localStorage.setItem", "authToken", result.Token);
+
+                Nav.NavigateTo("/"); // Chuyển hướng về trang chính
+            }
+            else
+            {
+                ErrorMessage = await response.Content.ReadAsStringAsync();
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = "Lỗi kết nối đến server!";
+        }
+    }
+
+    public class LoginResponse
+    {
+        public string Token { get; set; }
+    }
+}
